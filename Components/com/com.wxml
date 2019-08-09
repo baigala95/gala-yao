@@ -1,0 +1,59 @@
+<!--Components/com/com.wxml-->
+
+  <view class="combox">
+  <view class="com-com">
+    <view class="com-top">
+      <view class="com-top-left">
+        <view>3.9</view>
+        <view>评论</view>
+        <view>评论</view>
+      </view>
+      <view class="com-top-right">
+        <view>服务态度</view>
+        <view>服务态度</view>
+        <view>送达时间</view>
+      </view>
+    </view>
+    <view class="jabsar"></view>
+    <view class="com-main">
+       <view class="com-main-three">
+        <view class="all">全部</view>
+        <view class="nice">满意</view>
+        <view class="nonice">不满意</view>
+       </view>
+       <view class="com-main-check">
+          只看有内容的评价
+       </view>
+    </view>
+
+    <view>
+    
+   
+    <view class='item-com' wx:for="{{list}}" wx:key="this">
+    <view class="item-left">
+       <image src="{{item.avatar}}"></image>
+    </view>
+    
+    <view class="item-right">
+      <view>{{item.username}} <text></text> </view>
+      <view style="margin-top:30rpx;">star <text>{{item.deliveryTime}}分钟送达</text> </view>
+      <view style="margin-top:30rpx;font-size:26rpx;">
+      {{item.text}}
+      </view>
+      <view>
+         <text>赞</text>  
+         
+         <view class='itemtwo' wx:for="{{list}}" wx:key="this">
+         {{list.recommend}}
+         </view>
+
+      </view>
+
+    </view>
+    
+        
+    </view>
+
+    </view>
+   </view>
+  </view>

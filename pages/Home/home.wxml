@@ -1,0 +1,132 @@
+<import src="../../Components/goods/good" />
+<import src="../../Components/com/com"/>
+<import src="../../Components/shop/shop"/>
+
+<view class="home">
+  <view class="float {{isRuleTrue?'isRuleShow':'isRuleHide'}}" >
+    
+    <view>
+    {{list.name}}
+    </view>
+   
+    <view class="star" >
+    star
+         <!-- <image src="../../img/star24_half@2x" style="width:60rpx;"></image> -->
+    </view>
+
+    <view class="you">优惠信息</view>
+
+    <view class="list">
+       
+        <view class='item' wx:for="{{list.supports}}" wx:key="this">
+        {{item.description}}
+        </view>
+    </view>
+
+    <view class="shang">
+       商家公告
+       <view class="text">
+       {{list.bulletin}}
+       </view>
+
+    </view>
+
+    <text bindtap='hideRule' class="no">  × </text>
+  </view>
+
+  <view class="main">
+
+    <view class="home-top" style="background-image: url('../../img/back.png');background-size:100% 100%;">
+      <image style="width: 128rpx; height: 128rpx;border-radius:4rpx;margin-top:48rpx;margin-left:48rpx;" bindtap="bindViewTap" class="leftimg" src="{{list.avatar}}" mode="cover"></image>
+      <view class="top-right">
+       <view class="one">
+       <text>品牌</text>
+        <text>{{list.name}}</text>
+       </view>
+       <view class="two">
+        <text>{{list.description}}</text>
+       </view>
+       <view class="three">
+       <text>减</text>
+       <text>{{list.supports[0].description}}</text>
+       
+       <text class="five" bindtap='showRule'>5 个 ></text>
+       
+       </view>
+      </view>
+
+      <view class="top-down">
+         <text>公告</text>
+         <text>{{list.bulletin}}</text>
+      </view>
+
+    </view>
+
+
+
+    <!-- 轮播切换 -->
+    <view class="swiper-tab">
+
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">商品</view>
+
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">评价</view>
+
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">商家</view>
+
+    </view>
+
+    <scroll-view scroll-y="true" class="navList" scroll-with-animation scroll-left="{{scrollLeft}}">
+
+      <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px"          bindchange="bindChange">
+        <swiper-item>
+
+          <template is="good"></template>
+
+        </swiper-item>
+
+        <swiper-item>
+
+          <coma/>
+         
+  
+        </swiper-item>
+
+        <swiper-item>
+
+          <template is="shop"></template>
+         
+          
+
+        </swiper-item>
+
+      </swiper>
+    </scroll-view>
+
+    <!-- 轮播切换完事 -->
+
+  <view class="foot">
+    <view class="quan">
+       <view>.</view> 
+    </view>
+    
+    <view>
+    ￥0
+    </view>
+    <view>
+    另需配送费￥4元
+    </view>
+
+    <view>
+    ￥20元起送
+    </view>
+  
+  </view>
+
+
+
+  </view>
+
+
+
+
+</view>
