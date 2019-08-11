@@ -1,7 +1,5 @@
 <!--Components/shop/shop.wxml-->
-<template name="shop">
-<view>
-商家
-</view>
 
-</template>
+<view>
+商家  gfhfgh
+</view>

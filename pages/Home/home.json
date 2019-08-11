@@ -1,6 +1,8 @@
 {
   "component":true,
   "usingComponents": {
-    "coma":"../../Components/com/com"
+    "coma":"../../Components/com/com",
+    "good":"../../Components/goods/good",
+    "shop":"../../Components/shop/shop"
   }
 }

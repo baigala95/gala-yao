@@ -1,6 +1,33 @@
-<template name="good">
-  <view>
-  hahah
-  </view> goodgoodgood
-  
-</template>
+
+  <!-- 店铺食品 -->
+    <view class="nav-content">
+      <view class="nav-content-main">
+        <!-- 分类列表 -->
+        <view class="sorts">
+          <view class="foods-sorts" wx:for="{{list}}" wx:key="key">
+            <view class="sort" bindtap="showfoods" data-type="{{item.type}}">{{item.name}}</view>
+          </view>
+        </view>
+        <!-- 商品列表 -->
+        <view class="foods">
+          <view class="foods-l">
+            <view wx:for="{{list2}}" wx:key="key">
+              <view wx:if="{{foodstype == item.type}}" class="foods-main">
+                <view class="foodtitle">{{item.name}}</view>
+                <view wx:for="{{item.foods}}" wx:key="key" class="foods-item">
+                  <image src="{{item.image}}" class="foodsImg"></image>
+                  <view class="foodsdata">
+                    <!-- <image src="../SVG/add_circle.svg"></image> -->
+                    <text class="foodname">{{item.name}}</text>
+                    <text class="fooddescription">{{item.description}}</text>
+                    <text class="rat">月售{{item.sellCount}}份  好评率{{item.rating}}%</text>
+                    <text class="price">￥{{item.price}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          
+        </view>
+      </view>
+    </view>
