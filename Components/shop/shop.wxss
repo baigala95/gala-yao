@@ -1,1 +1,75 @@
 /* Components/shop/shop.wxss */
+.shopbox{
+  overflow: auto;
+  height:770rpx;
+
+}
+.bigbox{
+  padding:35rpx;
+}
+.shopname{
+  border-bottom:1px solid gainsboro; font-size:25rpx; line-height: 55rpx;
+  display:flex; justify-content:space-between;align-items: center; padding-bottom:20rpx;
+}
+h1{font-size:35rpx;}
+/* ⭐ */
+.grade{
+  display:inline-block;
+}
+.sell{
+  margin-left:10rpx; color:gray;
+}
+/* 配送 */
+.sendToAll{
+  display:flex; justify-content:space-between;align-items: center; font-size:27rpx;
+  color:gray; text-align: center
+}
+.sendTo{
+  width:33.3%; margin-top:35rpx;
+}
+.sendTo_center{
+  border-left:1px solid gainsboro;
+  border-right:1px solid gainsboro;
+}
+/* 空白 */
+.blank{
+  width:100%;height:30rpx;    
+  border-top: 1px solid rgba(7,17,27,.1);
+  border-bottom: 1px solid rgba(7,17,27,.1);
+  background: #f3f5f7;
+}
+/* 公告与活动 */
+.affiche{
+  padding:36rpx;
+}
+.affiche_title{
+    margin-bottom:16rpx;
+    line-height: 28rpx;
+    color: #07111b;
+    font-size:35rpx;
+}
+.affiche_text{
+  font-size:24rpx; color:#f01414; line-height:48rpx; 
+}
+.affiche_discounts{
+  border-top:1px solid gainsboro; font-size:24rpx; color:#07111b;padding:26rpx;
+} 
+/* 商家实景 */
+.live_action{
+  padding:36rpx;font-size:35rpx;
+}
+.shopImg{
+  width:100%;
+}
+.slide-image{
+  width: 240rpx;
+  height: 160rpx;
+}
+
+/* 商家信息 */
+.message{
+  padding: 33rpx;
+}
+swiper{
+  height:150rpx;
+}

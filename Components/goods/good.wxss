@@ -1,1 +1,167 @@
 /* Components/goods/good.wxss */
+/* pages/home/home.wxss */
+.box{
+  width: 100%;
+  position: relative;
+}
+.main{
+  width: 100%;
+}
+.header{
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+}
+.backImg{
+  width: 100%;
+  height: 200rpx;
+}
+.backImg-main{
+  width: 100%;
+  height: 100%;
+}
+.titleImg{
+  width: 128rpx;
+  height: 128rpx;
+  position: absolute;
+  top: 95rpx;
+  left: 315rpx;
+}
+.store-title{
+  width: 100%;
+  height: 80rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+}
+.store-evaluate{
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666666;
+}
+.nav{
+  margin-top: 10rpx;
+  width: 100%;
+  background: white;
+  height: 100rpx;
+  border-bottom: 1px solid #E5E5E5;
+  font-size: 34rpx;
+  color: #4D555D;
+  display: flex;
+  line-height: 100rpx;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+.nav-goods{
+  width: 33.33%;
+  text-align: center;
+}
+.nav-evaluate{
+  width: 33.33%;
+  text-align: center;
+
+}
+.nav-store{
+  text-align: center;
+  width: 33.33%;
+}
+.nav-content{
+  height: 1800rpx;
+  z-index: 3;
+}
+.nav-content-main{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.sorts{
+  height: 850rpx;
+  overflow-y: auto;
+}
+.sort{
+  width: 160rpx;
+  height: 108rpx;
+  text-align: center;
+  padding: 30rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+.foods{
+  height: 100%;
+  width: 590rpx;
+}
+.foods-l{
+  width: 100%;
+  margin-bottom: 116rpx;
+  overflow-y: auto;
+  height: 100%;
+}
+.foodtitle{
+  width: 100%;
+  height: 55rpx;
+  border-left: 3px solid #D9DDE1;
+  background: #F3F5F7;
+  color: #93999F;
+  font-size: 28rpx;
+  padding: 10rpx 0 0 18rpx;
+  box-sizing: border-box;
+}
+.foods-item{
+  width: 100%;
+  height: 220rpx;
+  background: white;
+  padding: 36rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+.foodsImg{
+  width: 115rpx;
+  height: 115rpx;
+  display: block;
+}
+.foodsdata{
+  margin-left: 20rpx;
+
+}
+.foodname{
+  font-size: 32rpx;
+  display: block;
+}
+.fooddescription{
+  font-size: 28rpx;
+  display: block;
+  color: #93999F;
+  margin-top: 8rpx;
+  width: 330rpx;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.foods-main{
+  overflow-y: auto;
+  height: 100%;
+}
+.rat{
+  font-size: 26rpx;
+  color: #93999F;
+  display: block;
+}
+.price{
+  font-size: 28rpx;
+  color: #F01414;
+  display: block;
+}
+.footer{
+  width: 100%;
+  height: 116rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #131D26;
+  z-index: 11;
+}

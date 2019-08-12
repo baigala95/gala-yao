@@ -1,66 +1,45 @@
-// Components/goods/good.js
-Page({
+// pages/home/home.js
+// import { Home } from 'home-module.js'
+// var home = new Home
+Component({
 
-  /**
-   * 页面的初始数据
-   */
+  
   data: {
+    list: [],
+    list2: [],
+     foodstype: "",
 
+    // foodstype: "",
+  },
+  ready () {
+    var that = this
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5bc320ecb0bf35423bd75398/ele/goods',
+      success: function (res) {
+        console.log(res),
+          that.setData({
+            list: res.data.goods,
+            list2: res.data.goods
+          })
+      }
+    })
+  },
+  //获取它的type
+  
+   methods:{
+    showfoods: function (e) {
+    this.setData({
+      foodstype: e.currentTarget.dataset.type
+    })
+  },
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  //获取它的type
+  // showfoods: function (e) {
+  //   this.setData({
+  //     foodstype: e.currentTarget.dataset.type
+  //   })
+  // },
+ 
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

@@ -2,7 +2,12 @@
 Component({
  
   data: {
-    
+    flag1: false,
+    flag2: false,
+    flag3: false,
+    iconType: [
+      'success'
+    ]
 
   },
   created() {
@@ -19,6 +24,29 @@ Component({
       }
     })
   },
+  methods: {
+    All: function () {
+      this.setData({
+        flag1: false,
+        flag2: true,
+        flag3: true
+      })
+    },
+    goods: function () {
+      this.setData({
+        flag1: true,
+        flag2: false,
+        flag3: true
+      })
+    },
+    notgood: function () {
+      this.setData({
+        flag1: true,
+        flag2: true,
+        flag3: false
+      })
+    }
+  }
  
 
 

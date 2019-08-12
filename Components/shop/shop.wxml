@@ -1,7 +1,89 @@
 <!--Components/shop/shop.wxml-->
-<template name="shop">
-<view>
-商家
-</view>
+<view class="shopbox">
+  <view class="bigbox">
+    <view class="shopname">
+      <view>
+        <h1>{{list.name}}</h1>
+        <view>
+          <!-- <view class="grade grade_img">
+            <image src="../../assets/img/star36_on@2x.png"></image>
+          </view>
+          <view class="grade grade_img">
+            <image src="../../assets/img/star36_on@2x.png"></image>
+          </view>
+          <view class="grade grade_img">
+            <image src="../../assets/img/star36_on@2x.png"></image>
+          </view>
+          <view class="grade grade_img">
+            <image src="../../assets/img/star36_on@2x.png"></image>
+          </view>
+          <view class="grade grade_img">
+            <image src="../../assets/img/star36_off@2x.png"></image>
+          </view> -->
+          <text class="sell">月售{{list.sellCount}}单</text>
+        </view>
+      </view>
+      <view style="text-align:center;color:gray;">
+        <view>❤</view>
+        <view>收藏</view>
+      </view>
+    </view>
+    <!-- 配送 -->
+    <view class="sendToAll">
+      <view class="sendTo">
+        <view>起送价</view>
+        <view style="color:black;">
+          <text style="font-size:40rpx;color:black;">{{list.minPrice}}</text>元
+        </view>
+      </view>
+      <view class="sendTo sendTo_center">
+        <view>商家配送</view>
+        <view style="color:black;">
+          <text style="font-size:40rpx;color:black;">{{list.deliveryPrice}}</text>元
+        </view>
+      </view>
+      <view class="sendTo">
+        <view>平均配送时间</view>
+        <view style="color:black;">
+          <text style="font-size:40rpx;">{{list.deliveryTime}}</text>分钟
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 空白 -->
+  <view class="blank"></view>
+  <view class="affiche">
+    <h2 class="affiche_title">公告与活动</h2>
+    <view style="padding:0 24rpx 36rpx;">
+      <text class="affiche_text">{{list.bulletin}}</text>
+    </view>
+    <view wx:for="{{list.supports}}" wx:key="id">
+      <view class="affiche_discounts">{{item.description}}</view>
+    </view>
+  </view>
+  <!-- 空白 -->
+  <view class="blank"></view>
+  <view class="live_action">
+    <view style="margin-bottom: 16rpx">商家实景</view>
+    <!-- <view wx:for="{{list.pics}}" key="id" class="shopImg">
+        <image class="imgs" src="{{item}}"></image>
+     </view>
+     -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" display-multiple-items="2.7">
+      <view wx:for="{{list.pics}}" wx:key="id">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="100rpx" />
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <!-- 空白 -->
+  <view class="blank"></view>
+  <view class="message">
+    <h2 class="affiche_title">商家信息</h2>
+    <view wx:for="{{list.infos}}" wx:key="id" style="margin-top:16rpx;">
+      <view class="affiche_discounts">{{item}}</view>
+    </view>
+  </view>
 
-</template>
+</view>
