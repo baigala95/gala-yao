@@ -207,7 +207,7 @@ margin-left:20rpx;
 
 .swiper-box{
  display: block;
- height: 780rpx !important;
+ height: 770rpx !important;
  width: 100%;
  overflow: hidden;
  border: 1px solid darkgoldenrod;
